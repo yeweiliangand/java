@@ -1,0 +1,500 @@
+2019-05-16 00:21:29.634  INFO 3932 --- [main] com.ck.demo.Demo1Application             : Starting Demo1Application on computerck with PID 3932 (D:\Spring\spring-bootfile\demo\target\classes started by 程坤 in D:\Spring\spring-bootfile\demo)
+2019-05-16 00:21:29.641  INFO 3932 --- [main] com.ck.demo.Demo1Application             : No active profile set, falling back to default profiles: default
+2019-05-16 00:21:31.783  INFO 3932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-16 00:21:31.787  INFO 3932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-16 00:21:31.889  INFO 3932 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-05-16 00:21:33.473  INFO 3932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https) 8080 (http)
+2019-05-16 00:21:33.671  INFO 3932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-16 00:21:33.672  INFO 3932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-16 00:21:33.678  INFO 3932 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-16 00:21:33.679  INFO 3932 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2019-05-16 00:21:33.679  INFO 3932 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-16 00:21:33.679  INFO 3932 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-16 00:21:34.824  INFO 3932 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2019-05-16 00:21:34.974  INFO 3932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-16 00:21:34.975  INFO 3932 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5107 ms
+2019-05-16 00:21:35.411  INFO 3932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-16 00:21:35.504  WARN 3932 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-16 00:21:35.564  INFO 3932 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-16 00:21:36.837  INFO 3932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) 8080 (http) with context path ''
+2019-05-16 00:21:36.840  INFO 3932 --- [main] com.ck.demo.Demo1Application             : Started Demo1Application in 8.521 seconds (JVM running for 10.6)
+2019-05-16 00:22:01.690 ERROR 3932 --- [https-openssl-nio-8443-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:22:01.690 ERROR 3932 --- [https-openssl-nio-8443-exec-4] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:22:01.690 ERROR 3932 --- [https-openssl-nio-8443-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:22:01.722 ERROR 3932 --- [https-openssl-nio-8443-exec-3] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:22:01.723 ERROR 3932 --- [https-openssl-nio-8443-exec-5] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:22:14.832  INFO 3932 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-16 00:22:14.912  INFO 3932 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-16 00:34:06.248  INFO 8120 --- [main] com.ck.demo.Demo1Application             : Starting Demo1Application on computerck with PID 8120 (D:\Spring\spring-bootfile\demo\target\classes started by 程坤 in D:\Spring\spring-bootfile\demo)
+2019-05-16 00:34:06.252  INFO 8120 --- [main] com.ck.demo.Demo1Application             : No active profile set, falling back to default profiles: default
+2019-05-16 00:34:07.080  INFO 8120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-16 00:34:07.080  INFO 8120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-16 00:34:07.127  INFO 8120 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2019-05-16 00:34:07.678  INFO 8120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https) 8080 (http)
+2019-05-16 00:34:07.721  INFO 8120 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-16 00:34:07.721  INFO 8120 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-16 00:34:07.721  INFO 8120 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-16 00:34:07.721  INFO 8120 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2019-05-16 00:34:07.721  INFO 8120 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-16 00:34:07.721  INFO 8120 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-16 00:34:08.750  INFO 8120 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2019-05-16 00:34:08.841  INFO 8120 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-16 00:34:08.841  INFO 8120 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2515 ms
+2019-05-16 00:34:09.112  INFO 8120 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-16 00:34:09.197  WARN 8120 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-16 00:34:09.227  INFO 8120 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-16 00:34:09.768  INFO 8120 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) 8080 (http) with context path ''
+2019-05-16 00:34:09.772  INFO 8120 --- [main] com.ck.demo.Demo1Application             : Started Demo1Application in 3.937 seconds (JVM running for 4.958)
+2019-05-16 00:34:35.795 ERROR 8120 --- [https-openssl-nio-8443-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:34:35.795 ERROR 8120 --- [https-openssl-nio-8443-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:34:35.798 ERROR 8120 --- [https-openssl-nio-8443-exec-3] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:34:36.015 ERROR 8120 --- [https-openssl-nio-8443-exec-5] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:34:36.015 ERROR 8120 --- [https-openssl-nio-8443-exec-4] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:34:36.018 ERROR 8120 --- [https-openssl-nio-8443-exec-7] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 00:35:24.573  INFO 8120 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-16 00:35:24.635  INFO 8120 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-16 18:24:21.758  INFO 544 --- [main] com.ck.demo.Demo1Application             : Starting Demo1Application on computerck with PID 544 (D:\Spring\spring-bootfile\demo\target\classes started by 程坤 in D:\Spring\spring-bootfile\demo)
+2019-05-16 18:24:21.763  INFO 544 --- [main] com.ck.demo.Demo1Application             : No active profile set, falling back to default profiles: default
+2019-05-16 18:24:23.006  INFO 544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-16 18:24:23.009  INFO 544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-16 18:24:23.065  INFO 544 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-05-16 18:24:24.299  INFO 544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https) 8080 (http)
+2019-05-16 18:24:24.358  INFO 544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-16 18:24:24.358  INFO 544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-16 18:24:24.362  INFO 544 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-16 18:24:24.362  INFO 544 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2019-05-16 18:24:24.362  INFO 544 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-16 18:24:24.362  INFO 544 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-16 18:24:25.399  INFO 544 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2019-05-16 18:24:25.555  INFO 544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-16 18:24:25.556  INFO 544 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3702 ms
+2019-05-16 18:24:25.897  INFO 544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-16 18:24:26.011  WARN 544 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-16 18:24:26.075  INFO 544 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-16 18:24:27.060  INFO 544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) 8080 (http) with context path ''
+2019-05-16 18:24:27.063  INFO 544 --- [main] com.ck.demo.Demo1Application             : Started Demo1Application in 5.892 seconds (JVM running for 7.084)
+2019-05-16 18:24:44.267 ERROR 544 --- [https-openssl-nio-8443-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:24:44.267 ERROR 544 --- [https-openssl-nio-8443-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:24:44.384 ERROR 544 --- [https-openssl-nio-8443-exec-3] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:24:44.385 ERROR 544 --- [https-openssl-nio-8443-exec-4] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:24:56.185  INFO 544 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-16 18:24:56.286  INFO 544 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-16 18:25:48.382  INFO 9172 --- [main] com.ck.demo.Demo1Application             : Starting Demo1Application on computerck with PID 9172 (D:\Spring\spring-bootfile\demo\target\classes started by 程坤 in D:\Spring\spring-bootfile\demo)
+2019-05-16 18:25:48.386  INFO 9172 --- [main] com.ck.demo.Demo1Application             : No active profile set, falling back to default profiles: default
+2019-05-16 18:25:49.070  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-16 18:25:49.072  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-16 18:25:49.103  INFO 9172 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-05-16 18:25:49.683  INFO 9172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https) 8080 (http)
+2019-05-16 18:25:49.724  INFO 9172 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-16 18:25:49.724  INFO 9172 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-16 18:25:49.728  INFO 9172 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-16 18:25:49.728  INFO 9172 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2019-05-16 18:25:49.728  INFO 9172 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-16 18:25:49.728  INFO 9172 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-16 18:25:50.756  INFO 9172 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2019-05-16 18:25:50.948  INFO 9172 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-16 18:25:50.948  INFO 9172 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2513 ms
+2019-05-16 18:25:51.198  INFO 9172 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-16 18:25:51.286  WARN 9172 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-16 18:25:51.315  INFO 9172 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-16 18:25:51.867  INFO 9172 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) 8080 (http) with context path ''
+2019-05-16 18:25:51.871  INFO 9172 --- [main] com.ck.demo.Demo1Application             : Started Demo1Application in 3.873 seconds (JVM running for 4.881)
+2019-05-16 18:25:57.129 ERROR 9172 --- [https-openssl-nio-8443-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:25:57.129 ERROR 9172 --- [https-openssl-nio-8443-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:25:57.335 ERROR 9172 --- [https-openssl-nio-8443-exec-3] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:25:57.336 ERROR 9172 --- [https-openssl-nio-8443-exec-4] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 18:26:01.440  INFO 9172 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-16 18:26:01.456  INFO 9172 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-16 19:45:31.116  INFO 7912 --- [main] com.ck.demo.Demo1Application             : Starting Demo1Application on computerck with PID 7912 (D:\Spring\spring-bootfile\demo\target\classes started by 程坤 in D:\Spring\spring-bootfile\demo)
+2019-05-16 19:45:31.120  INFO 7912 --- [main] com.ck.demo.Demo1Application             : No active profile set, falling back to default profiles: default
+2019-05-16 19:45:31.852  INFO 7912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-16 19:45:31.855  INFO 7912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-16 19:45:31.886  INFO 7912 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2019-05-16 19:45:32.549  INFO 7912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https) 8080 (http)
+2019-05-16 19:45:32.587  INFO 7912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-16 19:45:32.587  INFO 7912 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-16 19:45:32.591  INFO 7912 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-16 19:45:32.591  INFO 7912 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2019-05-16 19:45:32.591  INFO 7912 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-16 19:45:32.591  INFO 7912 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-16 19:45:33.621  INFO 7912 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2019-05-16 19:45:33.770  INFO 7912 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-16 19:45:33.771  INFO 7912 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2602 ms
+2019-05-16 19:45:34.026  INFO 7912 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-16 19:45:34.119  WARN 7912 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-16 19:45:34.153  INFO 7912 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-16 19:45:34.728  INFO 7912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) 8080 (http) with context path ''
+2019-05-16 19:45:34.731  INFO 7912 --- [main] com.ck.demo.Demo1Application             : Started Demo1Application in 4.01 seconds (JVM running for 5.08)
+2019-05-16 19:45:41.004 ERROR 7912 --- [https-openssl-nio-8443-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 19:45:41.004 ERROR 7912 --- [https-openssl-nio-8443-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 19:45:48.888  INFO 7912 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-16 19:45:48.906  INFO 7912 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-16 19:46:08.923  INFO 2604 --- [main] com.ck.demo.Demo1Application             : Starting Demo1Application on computerck with PID 2604 (D:\Spring\spring-bootfile\demo\target\classes started by 程坤 in D:\Spring\spring-bootfile\demo)
+2019-05-16 19:46:08.926  INFO 2604 --- [main] com.ck.demo.Demo1Application             : No active profile set, falling back to default profiles: default
+2019-05-16 19:46:09.675  INFO 2604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-16 19:46:09.683  INFO 2604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-16 19:46:09.715  INFO 2604 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-05-16 19:46:10.465  INFO 2604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8443 (https) 8080 (http)
+2019-05-16 19:46:10.529  INFO 2604 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-05-16 19:46:10.530  INFO 2604 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-05-16 19:46:10.535  INFO 2604 --- [main] o.a.catalina.core.AprLifecycleListener   : An older version [1.2.16] of the APR based Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [1.2.21]
+2019-05-16 19:46:10.536  INFO 2604 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.16] using APR version [1.6.3].
+2019-05-16 19:46:10.536  INFO 2604 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2019-05-16 19:46:10.537  INFO 2604 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2019-05-16 19:46:11.569  INFO 2604 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.0.2m  2 Nov 2017]
+2019-05-16 19:46:11.681  INFO 2604 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-05-16 19:46:11.682  INFO 2604 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2703 ms
+2019-05-16 19:46:11.940  INFO 2604 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-16 19:46:12.029  WARN 2604 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-05-16 19:46:12.058  INFO 2604 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2019-05-16 19:46:12.705  INFO 2604 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8443 (https) 8080 (http) with context path ''
+2019-05-16 19:46:12.708  INFO 2604 --- [main] com.ck.demo.Demo1Application             : Started Demo1Application in 4.175 seconds (JVM running for 5.205)
+2019-05-16 19:46:31.829 ERROR 2604 --- [https-openssl-nio-8443-exec-2] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 19:46:31.829 ERROR 2604 --- [https-openssl-nio-8443-exec-1] org.apache.tomcat.util.net.NioEndpoint   : Error running socket processor
+
+java.lang.UnsatisfiedLinkError: org.apache.tomcat.jni.SSL.renegotiatePending(J)I
+	at org.apache.tomcat.jni.SSL.renegotiatePending(Native Method) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.getHandshakeStatus(OpenSSLEngine.java:1037) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.openssl.OpenSSLEngine.wrap(OpenSSLEngine.java:458) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at javax.net.ssl.SSLEngine.wrap(Unknown Source) ~[na:1.8.0_172]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshakeWrap(SecureNioChannel.java:440) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SecureNioChannel.handshake(SecureNioChannel.java:211) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1392) ~[tomcat-embed-core-9.0.17.jar:9.0.17]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_172]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_172]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.17.jar:9.0.17]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_172]
+
+2019-05-16 19:47:19.863  INFO 2604 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-05-16 19:47:19.888  INFO 2604 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
